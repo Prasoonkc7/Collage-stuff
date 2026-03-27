@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function validation(){
+        var name=document.getElementById("name").value;
+        var country=document.getElementById("country").value;
+        var gender=document.getElementsByName("gender");
+        if(name==""){
+            alert("Name must be filled out");
+            return false;
+        }   
+        if(country=="option"){
+            alert("Please select your country");
+            return false;
+        }
+        if(gender=="Null"){
+            alert("Please select your gender");
+            return false;
+        }
+        return true;
+    }
+</script>
+<body>
+    
+    <form action="" onsubmit="return validation()">
+        
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" placeholder="Enter name">
+        <br><br>
+        <label for="country">select your country:</label>
+        <select name="country" id="country">
+            <option value="option">Select country</option>
+            <option value="Nepal">Nepal</option>
+            <option value="India">India</option>
+            <option value="china">china</option>
+        </select>
+        <br><br>
+        <label for="gender">For male</label>
+        <input type="radio" name="gender" value="male"><br><br>
+        <label for="">For femmale:</label>
+        <input type="radio" name="gender" value="female">
+        <br><br>
+        <input type="submit" value="Submit" id="submit">
+    </form>
+</body>
+</html>

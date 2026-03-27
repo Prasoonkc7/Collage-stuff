@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function alertty(){
+        var a=parseInt(document.getElementById("firstint").value);
+        var b=parseInt(document.getElementById("secondint").value);
+        if(a==""||b==""){
+            document.getElementById("result").innerHTML="Please enter a value";
+        }
+        else{
+            var c=a+b;
+            document.getElementById("result").innerHTML="The sum is "+c;
+        }
+    }
+</script>
+
+<body>
+    
+    <h2>To demonstrate alert showing value</h2>
+
+    <input type="number" id="firstint">
+    <input type="number" id="secondint">
+    <button onclick="alertty()">To show result</button>
+    <p id="result"></p>
+</body>
+</html>

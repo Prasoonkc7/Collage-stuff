@@ -1,0 +1,13 @@
+.nav-bar{
+      padding: 10px;
+      background-color: beige;
+      align-items: center;
+      justify-content: space-between;
+      display: flex;
+      border: 1px;
+      padding: 2px;
+}
+.nav-content{
+   justify-content: space-between;
+   align-items: center;
+}

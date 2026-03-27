@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+</head>
+<body>
+
+<script>
+function validation(){
+    var name = document.getElementById("name").value;
+    var age = document.getElementById("age").value;
+    var gender = document.querySelector('input[name="gender"]:checked');
+
+    if(name==""){
+        alert("Please enter your name");
+        return false;
+    }
+
+    if(age==""){
+        alert("Please select age");
+        return false;
+    }
+
+    if(gender==null){
+        alert("Please select gender");
+        return false;
+    }
+
+    return true;
+}
+</script>
+
+<div>
+<form onsubmit="return validation()">
+
+<label>Enter your name</label><br>
+<input type="text" id="name" placeholder="Enter your name"><br><br>
+
+<label>Select age</label><br>
+<select id="age">
+    <option value="">--Select Age--</option>
+    <option value="18-25">18-25</option>
+    <option value="26-35">26-35</option>
+    <option value="36-45">36-45</option>
+</select><br><br>
+
+<input type="radio" name="gender" value="male"> Male<br>
+<input type="radio" name="gender" value="female"> Female<br><br>
+
+<button type="submit">Submit</button>
+
+</form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Keyboard Events Example</title>
+
+<script>
+function keyDownEvent() {
+    alert("onkeydown event triggered");
+}
+
+function keyPressEvent() {
+    alert("onkeypress event triggered");
+}
+</script>
+
+</head>
+<body>
+
+<h2>Keyboard Event Example</h2>
+
+Enter text:
+<input type="text" onkeydown="keyDownEvent()" onkeypress="keyPressEvent()">
+
+</body>
+</html>

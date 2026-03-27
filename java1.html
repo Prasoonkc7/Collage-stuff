@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validation() {
+            var name = document.getElementById("name").value;
+            var gender = document.getElementsByName("gender");
+            var checked = false;
+            if (name == "") {
+                alert("Please enter your name");
+                return false;
+            }
+            for (var i = 0; i < gender.length; i++) {
+                if(gender[i].checked) {
+                    checked = true;
+                    break;
+                }
+            }
+            if(!checked){
+                alert("Please select your gender");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form action="" onsubmit="return validation()">
+        <label for="">Enter name:</label>
+        <input type="text" name="name" id="name"><br><br>
+        <label for="gender">Select gender:</label><br>
+        <label for="">Male:</label>
+        <input type="radio" name="gender" value="male">
+        <br>
+        <label for="female">female:</label>
+        <input type="radio" name="gender" value="female">
+        <br><br>
+        <input type="submit" value="submit">
+    </form>
+</body>
+
+</html>

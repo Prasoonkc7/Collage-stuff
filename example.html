@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>getElementsByTagName Example</title>
+  <script>
+    function changeAllParagraphs() {
+      // Access all <p> elements
+      var paragraphs = document.getElementsByTagName("p");
+      for (var i = 0; i < paragraphs.length; i++) {
+        paragraphs[i].style.color = "red";
+      } 
+    }
+  </script>
+</head>
+<body>
+  <h2>getElementsByTagName Example</h2>
+  <p>Paragraph 1</p>
+  <button onclick="changeAllParagraphs()">Change Color</button>
+</body>
+</html> 

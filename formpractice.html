@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validation(){
+            var name=document.getElementById("name").value;
+            var password=document.getElementById("password").value;
+            var country=document.getElementById("country");
+            var gender=document.getElementsByName("gender");
+            var checked=false;
+            
+            if(name==""){
+                alert("Please enter your username");
+                return false;
+            }
+            if(password==""){
+                alert("Please enter your password");
+                return false;
+            }
+            if(country.value=="null"){
+                alert("Please select your country");
+                return false;
+            }
+            for(var i=0; i<gender.length; i++){
+                if(gender[i].checked){
+                    checked=true;
+                    break;
+                }
+            }
+            if(!checked){
+                alert("Please select your gender");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    
+    <form action="" onsubmit="return validation()">
+        <label for="name">user Name:</label>
+        <input type="text" id="name" placeholder="Enter your username">
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter your password">
+        <br><br>
+        <label for="country">Country:</label>
+        <select name="country" id="country">
+            <option value="null">--Select a country--</option>
+            <option value="nepal">Nepal</option>
+            <option value="china">china</option>
+            <option value="india">india</option>
+        </select>
+        <br><br>
+        <label for="gender">Select gender:</label>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" value="male">
+        <label for="female">Female</label>
+        <input type="radio" name="gender" value="female">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

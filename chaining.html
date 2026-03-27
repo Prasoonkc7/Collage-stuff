@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("#h1").css("color","red").slideUp(2000).slideDown(2000);
+            })
+        });
+    </script>
+</head>
+<body>
+    <h1 id="h1">Example of chaining in jquary</h1>
+    <input type="submit" id="btn">
+</body>
+</html>
