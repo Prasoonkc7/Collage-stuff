@@ -9,7 +9,8 @@
 function validation(){
     var name = document.getElementById("name").value;
     var age = document.getElementById("age").value;
-    var gender = document.querySelector('input[name="gender"]:checked');
+    var checked = false;
+    var gender = document.getElementsByName("gender").value;
 
     if(name==""){
         alert("Please enter your name");
@@ -21,11 +22,16 @@ function validation(){
         return false;
     }
 
-    if(gender==null){
+    for(var i =0 ; i<gender.length;i++){
+        if(gender[i].checked){
+            checked = true;
+            break;
+        }
+    }
+    if(!checked){
         alert("Please select gender");
         return false;
     }
-
     return true;
 }
 </script>

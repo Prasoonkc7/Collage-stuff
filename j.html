@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $("#h2").click(function(){
+            $("#p1").css("color","red").slideUp(2000).slideDown(2000);
+        })
+    })
+</script>
+<body>
+    <h2 id="h2">"Example of jquery chaining"</h2>
+    <p id="p1">Hello it's me p1</p>
+</body>
+</html>

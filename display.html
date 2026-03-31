@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Event Example</title>
+    <script>
+        function checkKey(e) {
+            // 40 is the keyCode for down arrow
+            if (e.keyCode === 40) {
+                document.getElementById("print").innerHTML = "You have pressed the down arrow key";
+            }
+        }
+
+        // Attach keydown listener to the whole document
+        document.addEventListener("keydown", checkKey);
+    </script>
+</head>
+<body>
+    <h2>Press down arrow key to display message</h2>
+    <p id="print"></p>
+</body>
+</html>
